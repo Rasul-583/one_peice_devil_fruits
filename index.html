@@ -5,32 +5,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;500;600;900&display=swap" rel="stylesheet">    <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
     <title>One Piece Crew Maker</title>
 </head>
 <body>
     <h1>Welcome to the One Piece Crew Maker</h1>
     <p>This site helps you make a crew of one piece characters and devil fruits or something idk lol</p><br>
     <h2>How to use:</h2>
-    <p>WIP...</p>
+    <p>Type the rank in the rank section and the devil fruit in the devil fruit section. You can also add an image by clicking the "upload image button.</p><br><br><br>
 
-    <p>Name: <input type="text" id="field1"></p>
+    <p>Rank: <input type="text" id="field1"></p>
     <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <h3><label for="file" style="cursor: pointer;">Upload Image</label></h3>
     <p><img id="output" width="200" /></p>
-    
     <script>
     var loadFile = function(event) {
         var image = document.getElementById('output');
         image.src = URL.createObjectURL(event.target.files[0]);
     };
     </script>
-    <p>Link: <input type="text" id="field2"></p>
-    
-    <button onclick="myFunction()">Submit</button>
-    
-    <script>
-    function myFunction() {
-      document.getElementById("field3").value = "[[after]] [" + document.getElementById("field1").value + "](" + document.getElementById("field2").value + ")[[/after]]";
-    }
-    </script>
+    <p>Devil Fruit: <input type="text" id="field2"></p>
 </body>
